@@ -11,4 +11,4 @@ nav_order: 3
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-I have been working as the Graduate Teaching Assitant for lab sessions of COSC 237 in Department of Computer and Information Sciences, Towson University, Towson, MD, USA 21252 since Aug 2023.
+I have been working as the Graduate Teaching Assitant for lab sessions of COSC 237-101 in Department of Computer and Information Sciences, Towson University, Towson, MD, USA 21252 since Aug 2023.
