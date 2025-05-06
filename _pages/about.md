@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: PhD Candidate, Dept. of CIS, Towson University
+subtitle: Ph.D. Candidate, Dept. of CIS, Towson University
 
 profile:
   image: prof_pic.jpg
