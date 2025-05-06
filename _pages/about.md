@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Here is the subtitle info.
+subtitle: PhD Candidate, Dept. of CIS, Towson University
 
 profile:
   image: prof_pic.jpg
@@ -21,4 +21,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a second-year IT Ph.D. student of the Department of Computer & Information Sciences at Towson University, advised by [Dr. Yifan Guo](https://yifan-guo.com/www/index.html). My research interests focus on Edge Computing and AI Security.
+I am a PhD Candidate (third-year IT Ph.D. student) of the Department of Computer & Information Sciences at Towson University, advised by [Dr. Yifan Guo](https://yifan-guo.com/www/index.html). My research interests focus on Edge AI System and Security.
