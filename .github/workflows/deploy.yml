@@ -1,0 +1,44 @@
+name: Deploy site
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "assets/**"
+      - "_sass/**"
+      - "_scripts/**"
+      - "**/*.md"
+      - "**/*.html"
+      - "**/*.liquid"
+      - "**/*.js"
+      - "**/*.yml"
+      - "**/*.bib"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: System deps (ImageMagick for jekyll-imagemagick)
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
