@@ -135,7 +135,6 @@ GEM
       stringio
       time
       uri
-    ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (7.0.5)
@@ -197,7 +196,6 @@ DEPENDENCIES
   jekyll-scholar
   jekyll-sitemap
   jekyll-terser!
-  ostruct
   sass-embedded (~> 1.95)
 
 BUNDLED WITH

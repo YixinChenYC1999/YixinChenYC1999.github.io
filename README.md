@@ -1,24 +1,20 @@
 ### Thanks for visiting my homepage! :)
 
-To test this page locally, on a Ubuntu machine with zsh, at the homefolder path, run:
+This repository pins Ruby 3.4.10 through `.ruby-version`. Use an rbenv-managed
+Ruby for the supported project workflow; entering the repository selects the
+pinned version automatically. Bundler 2.6.6 is expected.
 
 ```bash
-sudo apt install ruby-full build-essential zlib1g-dev
-ruby -v
-echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-gem install bundler jekyll
-jekyll -v
-bundle -v
+rbenv install -s 3.4.10
+ruby --version
+gem install bundler -v 2.6.6
+bundle --version
+bundle install
 ```
 
-Then move to the repo folder, run:
+To build or serve the site from the repository root, run:
 
 ```bash
-bundle install
-bundle update
 bundle exec jekyll build
 # use JEKYLL_ENV=production to preview
 JEKYLL_ENV=production bundle exec jekyll serve --host 0.0.0.0 --port 8080
