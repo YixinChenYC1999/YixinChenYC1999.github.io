@@ -1,0 +1,16 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Dimensions
+@use "variables" with (
+  $max-content-width: {{ site.max_width }}
+);
+
+@use "themes";
+@use "layout";
+@use "base";
+@use "cv";
+@use "font-awesome/fontawesome";
+@use "font-awesome/solid";

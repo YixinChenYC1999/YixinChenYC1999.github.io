@@ -1,0 +1,156 @@
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
+
+title: blank # the website title (if blank, full name will be used instead)
+first_name: Yixin
+last_name: Chen
+description: 
+# the ">" symbol means to ignore newlines until "footer_text:"
+footer_text: >
+  © 2025-2026 Yixin Chen. 
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, with a lightweight customized theme based on <a href="https://github.com/alshedivat/al-folio">al-folio</a> at commit <a href="https://github.com/alshedivat/al-folio/tree/db2a1d1b1984d00a52b0be1cb74b2b3aefb31ad5">db2a1d1</a>. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+
+url: https://yixinchenyc1999.github.io # the base hostname & protocol for your site
+last_updated: true # set to true if you want to display last updated in the footer
+back_to_top: true # set to false to disable the back to top button
+
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
+
+navbar_fixed: true
+footer_fixed: true
+enable_math: true
+enable_medium_zoom: true
+enable_progressbar: true
+# Dimensions
+max_width: 875px
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+
+include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - AGENTS.md
+  - vendor
+plugins:
+  - jekyll-email-protect
+  - jekyll-imagemagick
+  - jekyll-scholar
+  - jekyll-sitemap
+  - jekyll-terser
+
+sass:
+  style: compressed
+
+terser:
+  compress:
+    drop_console: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+scholar:
+  last_name: [Chen]
+  first_name: [Yixin]
+
+  style: ieee
+  locale: en
+
+  source: /_data/
+  bibliography: publications.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  query: "@*"
+  group_by: type
+  group_order: ascending
+  type_order: [article,inproceedings,incollection,book,thesis,techreport,manual,misc]
+  sort_by: year, month
+  order: descending, descending
+
+  remove_duplicates: true
+
+# -----------------------------------------------------------------------------
+# Images
+# -----------------------------------------------------------------------------
+
+imagemagick:
+  enabled: true
+  widths:
+    - 480
+    - 800
+    - 1400
+  input_directories:
+    - assets/img/
+  input_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".tiff"
+    - ".gif"
+  output_formats:
+    webp: "-quality 85"
+
+lazy_loading_images: true
+
+third_party_libraries:
+  download: false
+  google_fonts:
+    url:
+      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+  jquery:
+    integrity:
+      js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+    version: "3.6.0"
+  mathjax:
+    integrity:
+      js: "sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    local:
+      fonts: "output/chtml/fonts/woff-v2/"
+    url:
+      fonts: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2/"
+      js: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+    version: "3.2.2"
+  mdb:
+    integrity:
+      css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      css_map: "sha256-iYYMNfsJdVZjvsebJulg09miBXM4/GMTJgv1u5EZFFM="
+      js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+      js_map: "sha256-UPgyn4YNsT0khkBK5553QwhnlbTlU0aa+igyc6qP1bE="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+      css_map: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css.map"
+      js: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+      js_map: "https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js.map"
+    version: "4.20.0"
+  medium_zoom:
+    integrity:
+      js: "sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+    version: "1.1.0"
+  polyfill:
+    url:
+      js: "https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+    version: "3"

@@ -1,0 +1,19 @@
+_site
+.bundle
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.DS_store
+.tweet-cache
+assets/libs/
+node_modules/
+vendor
+.idea
+.vscode
+
+# temp
+AGENTS.md
+.agent-local
+.update_target_md
+.check_tarball
+.tmp
