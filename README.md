@@ -3,6 +3,7 @@
 This repository pins Ruby 3.4.10 through `.ruby-version`. Use an rbenv-managed
 Ruby for the supported project workflow; entering the repository selects the
 pinned version automatically. Bundler 2.6.6 is expected.
+ImageMagick must also be available because production builds use `jekyll-imagemagick`.
 
 ```bash
 rbenv install -s 3.4.10
